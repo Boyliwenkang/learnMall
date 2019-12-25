@@ -24,7 +24,6 @@ public class CommentGenerator extends DefaultCommentGenerator {
         super.addConfigurationProperties(properties);
         this.addRemarkComments = StringUtility.isTrue(properties.getProperty("addRemarkComments"));
     }
-
     /**
      * 给字段添加注释
      */
