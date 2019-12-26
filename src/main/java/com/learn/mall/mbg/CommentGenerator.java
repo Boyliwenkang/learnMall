@@ -9,7 +9,7 @@ import org.mybatis.generator.internal.util.StringUtility;
 import java.util.Properties;
 
 /**
- * @Author: 李文康
+ * @Author: Keith
  * @Date: 2019-12-24 10:08
  */
 public class CommentGenerator extends DefaultCommentGenerator {
@@ -45,7 +45,7 @@ public class CommentGenerator extends DefaultCommentGenerator {
         //获取数据库字段的备注信息
         String[] remarkLines = remarks.split(System.getProperty("line.separator"));
         for (String remarkLine : remarkLines) {
-            field.addJavaDocLine("*" + remarkLine);
+            field.addJavaDocLine(" *" + remarkLine);
         }
         addJavadocTag(field, false);
         field.addJavaDocLine("*/");
