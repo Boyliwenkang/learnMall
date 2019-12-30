@@ -1,7 +1,9 @@
 package com.learn.mall.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.learn.mall.mbg.mapper.PmsBrandMapper;
 import com.learn.mall.mbg.model.PmsBrand;
+import com.learn.mall.mbg.model.PmsBrandExample;
 import com.learn.mall.service.PmsBrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -15,35 +17,37 @@ import java.util.List;
 public class PmsBrandServiceImpl implements PmsBrandService {
 
     @Autowired
-    PmsBrandMapper pmsBrandMapper;
+    private PmsBrandMapper pmsBrandMapper;
 
     @Override
     public List<PmsBrand> listAllBrand() {
-        return null;
+        return this.pmsBrandMapper.selectByExample(new PmsBrandExample());
     }
 
     @Override
     public int createBrand(PmsBrand pmsBrand) {
-        return 0;
+        return this.pmsBrandMapper.insertSelective(pmsBrand);
     }
 
     @Override
     public int updateBrand(Long id, PmsBrand pmsBrand) {
-        return 0;
+        pmsBrand.setId(id);
+        return this.pmsBrandMapper.updateByPrimaryKeySelective(pmsBrand);
     }
 
     @Override
     public int deleteBrand(Long id) {
-        return 0;
+        return this.deleteBrand(id);
     }
 
     @Override
     public List<PmsBrand> listBrand(int pageNum, int pageSize) {
-        return null;
+        PageHelper.startPage(pageNum, pageSize);
+        return this.pmsBrandMapper.selectByExample(new PmsBrandExample());
     }
 
     @Override
     public PmsBrand getBrand(Long id) {
-        return null;
+        return this.pmsBrandMapper.selectByPrimaryKey(id);
     }
 }
