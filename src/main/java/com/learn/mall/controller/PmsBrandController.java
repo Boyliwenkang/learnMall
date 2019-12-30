@@ -21,6 +21,7 @@ import java.util.List;
 
 @Validated
 @Controller
+@SuppressWarnings("all")
 @RequestMapping("/brand")
 public class PmsBrandController {
 
