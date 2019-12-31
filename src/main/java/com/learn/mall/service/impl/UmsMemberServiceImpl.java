@@ -24,12 +24,13 @@ public class UmsMemberServiceImpl implements UmsMemberService {
     private String REDIS_KEY_PREFIX_AUTH_CODE;
     @Value("${redis.key.expire.authCode}")
     private Long AUTH_CODE_EXPIRE_SECONDS;
+    private int verifyCode = 6;
 
     @Override
     public CommonResult generateAuthCode(String telephone) {
         StringBuilder sb = new StringBuilder();
         Random random = new Random();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < verifyCode; i++) {
             sb.append(random.nextInt(10));
         }
         //验证码绑定手机号并存储到redis

@@ -25,7 +25,7 @@ public class UmsMemberController {
     @ApiOperation("获取验证码")
     @GetMapping("/getAuthCode")
     @ResponseBody
-    public CommonResult getAuthCode(@RequestBody String telephone) {
+    public CommonResult getAuthCode(@RequestParam String telephone) {
         return umsMemberService.generateAuthCode(telephone);
     }
 
