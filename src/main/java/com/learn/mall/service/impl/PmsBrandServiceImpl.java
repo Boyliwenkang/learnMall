@@ -2,7 +2,6 @@ package com.learn.mall.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.learn.mall.mbg.mapper.PmsBrandMapper;
-import com.learn.mall.mbg.model.PmsBrand;
 import com.learn.mall.mbg.model.PmsBrandExample;
 import com.learn.mall.service.PmsBrandService;
 import org.springframework.beans.factory.annotation.Autowired;

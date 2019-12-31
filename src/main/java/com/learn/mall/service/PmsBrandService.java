@@ -1,7 +1,5 @@
 package com.learn.mall.service;
 
-import com.learn.mall.mbg.model.PmsBrand;
-
 import java.util.List;
 
 /**
