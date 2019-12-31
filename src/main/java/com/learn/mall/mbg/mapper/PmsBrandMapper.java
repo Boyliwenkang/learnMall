@@ -9,6 +9,7 @@ import org.apache.ibatis.annotations.Param;
 
 /**
  * @author Keith
+ * 品牌管理
  */
 
 public interface PmsBrandMapper {
