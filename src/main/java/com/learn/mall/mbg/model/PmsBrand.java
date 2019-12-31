@@ -3,6 +3,11 @@ package com.learn.mall.mbg.model;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 
+/**
+ * @Author: Keith
+ * @Date: 2019-12-26 11:52
+ * 实体类
+ */
 public class PmsBrand implements Serializable {
     private Long id;
 

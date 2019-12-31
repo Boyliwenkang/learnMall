@@ -1,5 +1,7 @@
 package com.learn.mall.service;
 
+import com.learn.mall.mbg.model.PmsBrand;
+
 import java.util.List;
 
 /**
@@ -7,6 +9,7 @@ import java.util.List;
  * @Date: 2019-12-26 11:39
  * PmsBrandService
  */
+
 public interface PmsBrandService {
 
     List<PmsBrand> listAllBrand();

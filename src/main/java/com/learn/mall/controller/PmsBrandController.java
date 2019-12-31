@@ -2,12 +2,14 @@ package com.learn.mall.controller;
 
 import com.learn.mall.common.api.CommonPage;
 import com.learn.mall.common.api.CommonResult;
+import com.learn.mall.mbg.model.PmsBrand;
 import com.learn.mall.service.PmsBrandService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +30,7 @@ import java.util.List;
 @RequestMapping("/brand")
 public class PmsBrandController {
 
-    @Resource
+    @Autowired
     private PmsBrandService pmsBrandService;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PmsBrandController.class);
@@ -100,7 +102,7 @@ public class PmsBrandController {
     }
 
     @ApiOperation("获取指定id的品牌详情")
-    @GetMapping("/{id}")
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<PmsBrand> brand(@PathVariable("id") Long id) {
         return CommonResult.success(pmsBrandService.getBrand(id));
