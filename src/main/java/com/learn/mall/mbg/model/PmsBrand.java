@@ -6,7 +6,6 @@ import java.io.Serializable;
 
 /**
  * @Author: Keith
- * @Date: 2019-12-26 11:52
  * 品牌管理实体类
  */
 public class PmsBrand implements Serializable {

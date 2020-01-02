@@ -1,7 +1,7 @@
 package com.learn.mall.mbg.mapper;
 
-import com.learn.mall.mbg.model.UmsMember;
-import com.learn.mall.mbg.model.UmsMemberExample;
+import com.learn.mall.mbg.model.UmsAdminRoleRelation;
+import com.learn.mall.mbg.model.UmsAdminRoleRelationExample;
 
 import java.util.List;
 
@@ -9,16 +9,16 @@ import org.apache.ibatis.annotations.Param;
 
 /**
  * @author Keith
- * 会员管理
+ * 后台用户和角色关系表
  */
-public interface UmsMemberMapper {
+public interface UmsAdminRoleRelationMapper {
     /**
      * 查询条数
      *
      * @param example
      * @return int
      */
-    int countByExample(UmsMemberExample example);
+    int countByExample(UmsAdminRoleRelationExample example);
 
     /**
      * 删除
@@ -26,7 +26,7 @@ public interface UmsMemberMapper {
      * @param example
      * @return int
      */
-    int deleteByExample(UmsMemberExample example);
+    int deleteByExample(UmsAdminRoleRelationExample example);
 
     /**
      * 根据Id删除
@@ -42,7 +42,7 @@ public interface UmsMemberMapper {
      * @param record
      * @return int
      */
-    int insert(UmsMember record);
+    int insert(UmsAdminRoleRelation record);
 
     /**
      * 选择性新增
@@ -50,7 +50,7 @@ public interface UmsMemberMapper {
      * @param record
      * @return int
      */
-    int insertSelective(UmsMember record);
+    int insertSelective(UmsAdminRoleRelation record);
 
     /**
      * 查询
@@ -58,7 +58,7 @@ public interface UmsMemberMapper {
      * @param example
      * @return List<PmsBrand>
      */
-    List<UmsMember> selectByExample(UmsMemberExample example);
+    List<UmsAdminRoleRelation> selectByExample(UmsAdminRoleRelationExample example);
 
     /**
      * id查询
@@ -66,7 +66,7 @@ public interface UmsMemberMapper {
      * @param id
      * @return PmsBrand
      */
-    UmsMember selectByPrimaryKey(Long id);
+    UmsAdminRoleRelation selectByPrimaryKey(Long id);
 
     /**
      * 更新
@@ -75,7 +75,7 @@ public interface UmsMemberMapper {
      * @param example
      * @return int
      */
-    int updateByExampleSelective(@Param("record") UmsMember record, @Param("example") UmsMemberExample example);
+    int updateByExampleSelective(@Param("record") UmsAdminRoleRelation record, @Param("example") UmsAdminRoleRelationExample example);
 
     /**
      * 更新
@@ -84,7 +84,7 @@ public interface UmsMemberMapper {
      * @param example
      * @return int
      */
-    int updateByExample(@Param("record") UmsMember record, @Param("example") UmsMemberExample example);
+    int updateByExample(@Param("record") UmsAdminRoleRelation record, @Param("example") UmsAdminRoleRelationExample example);
 
     /**
      * 更新
@@ -92,7 +92,7 @@ public interface UmsMemberMapper {
      * @param record
      * @return int
      */
-    int updateByPrimaryKeySelective(UmsMember record);
+    int updateByPrimaryKeySelective(UmsAdminRoleRelation record);
 
     /**
      * 更新
@@ -100,5 +100,5 @@ public interface UmsMemberMapper {
      * @param record
      * @return int
      */
-    int updateByPrimaryKey(UmsMember record);
+    int updateByPrimaryKey(UmsAdminRoleRelation record);
 }

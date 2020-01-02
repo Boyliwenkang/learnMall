@@ -13,7 +13,6 @@ import org.apache.ibatis.annotations.Param;
  */
 
 public interface PmsBrandMapper {
-
     /**
      * 查询条数
      *

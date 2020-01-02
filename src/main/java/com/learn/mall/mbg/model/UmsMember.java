@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * @author Keith
- * 品牌管理
+ * 会员实体类
  */
 public class UmsMember implements Serializable {
     private Long id;
