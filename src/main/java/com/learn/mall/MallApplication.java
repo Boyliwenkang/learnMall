@@ -11,6 +11,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  */
 
 @SpringBootApplication
+@MapperScan(value = "com.learn.mall.dao")
 public class MallApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {

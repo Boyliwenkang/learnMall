@@ -10,17 +10,16 @@ import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * @Author: Keith
  * @Date: 2019-12-26 11:26
- * 品牌管理Controller
  */
 
 @Api(tags = "PmsBrandController", description = "商品品牌管理")
@@ -38,6 +37,7 @@ public class PmsBrandController {
     @ApiOperation("获取所有品牌列表")
     @GetMapping("listAll")
     @ResponseBody
+    @PreAuthorize("hasAuthority('pms:brand:read')")
     public CommonResult<List<PmsBrand>> getBrandList() {
         return CommonResult.success(pmsBrandService.listAllBrand());
     }
@@ -102,7 +102,7 @@ public class PmsBrandController {
     }
 
     @ApiOperation("获取指定id的品牌详情")
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @GetMapping("/{id}")
     @ResponseBody
     public CommonResult<PmsBrand> brand(@PathVariable("id") Long id) {
         return CommonResult.success(pmsBrandService.getBrand(id));
