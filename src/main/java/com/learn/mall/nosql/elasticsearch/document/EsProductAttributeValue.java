@@ -29,10 +29,6 @@ public class EsProductAttributeValue implements Serializable {
     @Field(type = FieldType.Keyword)
     private String name;
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
     public Long getId() {
         return id;
     }

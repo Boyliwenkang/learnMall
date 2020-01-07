@@ -35,7 +35,7 @@ public class EsProductServiceImpl implements EsProductService {
         int result = 0;
         while (iterator.hasNext()) {
             result++;
-            iterator.hasNext();
+            iterator.next();
         }
         return result;
     }

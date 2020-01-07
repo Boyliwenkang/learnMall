@@ -46,10 +46,6 @@ public class EsProduct implements Serializable {
     @Field(type = FieldType.Nested)
     private List<EsProductRepository> attrValueList;
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
-    }
-
     public Long getId() {
         return id;
     }
