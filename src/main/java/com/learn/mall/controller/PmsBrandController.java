@@ -45,6 +45,7 @@ public class PmsBrandController {
     @ApiOperation("添加品牌")
     @PostMapping("/create")
     @ResponseBody
+    @PreAuthorize("hasAuthority('pms:brand:create')")
     public CommonResult createBrand(@RequestBody PmsBrand pmsBrand) {
         CommonResult commonResult;
         int count = pmsBrandService.createBrand(pmsBrand);
@@ -61,6 +62,7 @@ public class PmsBrandController {
     @ApiOperation("更新指定id品牌信息")
     @PostMapping("/update/{id}")
     @ResponseBody
+    @PreAuthorize("hasAuthority('pms:brand:update')")
     public CommonResult updateBrand(@PathVariable("id") Long id, PmsBrand pmsBrand) {
         CommonResult commonResult;
         int count = pmsBrandService.updateBrand(id, pmsBrand);
@@ -77,6 +79,7 @@ public class PmsBrandController {
     @ApiOperation("删除指定id的品牌")
     @GetMapping("/delete/{id}")
     @ResponseBody
+    @PreAuthorize("hasAuthority('pms:brand:delete')")
     public CommonResult deleteBrand(@PathVariable("id") Long id) {
         CommonResult commonResult;
         int count = pmsBrandService.deleteBrand(id);
