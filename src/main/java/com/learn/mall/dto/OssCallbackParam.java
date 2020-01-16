@@ -2,6 +2,8 @@ package com.learn.mall.dto;
 
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.Random;
+
 /**
  * @Author: Keith
  * @Date: 2020-01-10 16:38
